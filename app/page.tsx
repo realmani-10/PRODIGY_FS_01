@@ -1,66 +1,64 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="landing-page">
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-glow" />
+        <div className="hero-content">
+          <span className="badge">Security by Design</span>
+          <h1 className="hero-title">
+            Authentication{' '}
+            <span className="gradient-text">Made Simple</span>
+          </h1>
+          <p className="hero-subtitle">
+            A premium, production-ready authentication system with secure
+            sessions, role-based access control, and a modern developer
+            experience.
           </p>
+          <div className="hero-actions">
+            <Link href="/register" className="btn btn-primary btn-large">
+              Get Started
+            </Link>
+            <Link href="/login" className="btn btn-ghost btn-large">
+              Sign In
+            </Link>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Features Section */}
+      <section className="features-section">
+        <div className="features-grid">
+          <div className="feature-card">
+            <div className="feature-icon">🔐</div>
+            <h3 className="feature-title">Secure Auth</h3>
+            <p className="feature-description">
+              Industry-standard bcrypt password hashing with secure JWT session
+              management to keep your users safe.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <div className="feature-icon">🛡️</div>
+            <h3 className="feature-title">Role-Based Access</h3>
+            <p className="feature-description">
+              Built-in USER and ADMIN roles with granular access control to
+              protect your routes and resources.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <div className="feature-icon">⚡</div>
+            <h3 className="feature-title">Modern Stack</h3>
+            <p className="feature-description">
+              Built with Next.js 16, PostgreSQL, and Prisma ORM for a
+              type-safe, performant, and scalable foundation.
+            </p>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
