@@ -67,29 +67,27 @@ The application follows modern authentication practices using **Auth.js (NextAut
 
 ### 🏠 Landing Page
 
-![Landing Page](screenshots/landing-page.png)
+![Landing Page](screenshots/landingpage.png)
 
 ---
 
 ### 📝 Registration Page
 
-![Registration Page](screenshots/register-page.png)
+![Registration Page](screenshots/loginpage.png)
 
 ---
 
 ### 📊 User Dashboard
 
-![User Dashboard](screenshots/dashboard.png)
+![User Dashboard](screenshots/userdashboard.png)
 
 ---
 
 ### 👨‍💼 Admin Dashboard
 
-![Admin Dashboard](screenshots/admin-dashboard.png)
+![Admin Dashboard](screenshots/admindashboard.png)
 
----
-
-## ⚙️ Installation
+---## ⚙️ Installation
 
 Clone the repository:
 
