@@ -171,37 +171,6 @@ Through this project, I gained practical experience with:
 
 ---
 
-## 👨‍💻 Internship Details
-
-**Organization:** Prodigy InfoTech
-
-**Internship Role:** Full Stack Developer Intern
-
-**Task:** Task-01 — Secure User Authentication
-
----
-
-## 📄 License
-
-This project was developed as part of my internship assignment at **Prodigy InfoTech** and is intended for educational and learning purposes.
-### Landing Page
-
-*(Add screenshot here)*
-
-### Registration
-
-*(Add screenshot here)*
-
-### Dashboard
-
-*(Add screenshot here)*
-
-### Admin Panel
-
-*(Add screenshot here)*
-
----
-
 ## ⚙️ Installation
 
 ```bash
@@ -248,5 +217,7 @@ During this task, I gained practical experience with:
 ## 👨‍💻 Internship
 
 **Organization:** Prodigy InfoTech
+
+**Internship Role:** Full Stack Developer Intern
 
 **Task:** Task-01 — Secure User Authentication
