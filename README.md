@@ -1,4 +1,4 @@
-# 🔐 AuthGuard – Secure User Authentication System
+# 🔐 AuthGuard - Secure User Authentication System
 
 Task-01 submission for my **Full Stack Development Internship** at **Prodigy InfoTech**.
 
