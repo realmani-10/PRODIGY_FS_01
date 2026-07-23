@@ -13,17 +13,17 @@
   --border-glass: rgba(255, 255, 255, 0.08);
   --bg-glass: rgba(17, 24, 39, 0.6);
   --bg-glass-hover: rgba(17, 24, 39, 0.8);
-  
+
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 20px;
-  
+
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
-  
+
   --shadow-glow: 0 0 25px rgba(124, 58, 237, 0.3);
   --shadow-glow-blue: 0 0 25px rgba(59, 130, 246, 0.3);
-  
+
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
@@ -41,8 +41,9 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   line-height: 1.5;
-  padding-top: 80px; /* Space for fixed navbar */
-  background-image: 
+  padding-top: 80px;
+  /* Space for fixed navbar */
+  background-image:
     radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.1) 0px, transparent 50%),
     radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.1) 0px, transparent 50%);
 }
@@ -54,20 +55,41 @@ a {
 
 /* Animations */
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes gradient-anim {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
@@ -75,6 +97,7 @@ a {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -106,9 +129,9 @@ a {
 
 .navbar-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -209,13 +232,15 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
   transform: translateX(-100%);
   animation: loading 1.5s infinite;
 }
 
 @keyframes loading {
-  100% { transform: translateX(100%); }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /* Buttons */
@@ -285,13 +310,13 @@ a {
 }
 
 /* Home / Hero Page */
-.hero {
-  position: relative;
-  min-height: calc(80vh - 80px);
-  display: flex;
-  align-items: center;
+.hero-section {
   justify-content: center;
-  padding: 4rem 2rem;
+  align-items: center;
+  min-height: calc(80vh - 80px);
+  padding: 1rem 2rem;
+  display: flex;
+  position: relative;
 }
 
 .hero-glow {
@@ -309,7 +334,8 @@ a {
 
 .hero-content {
   text-align: center;
-  max-width: 800px;
+  max-width: 850px;
+  margin: 0 auto;
   z-index: 1;
 }
 
@@ -322,13 +348,13 @@ a {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--accent-cyan);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -341,27 +367,28 @@ a {
   -webkit-text-fill-color: transparent;
   background-size: 200% 200%;
   animation: gradient-anim 6s ease infinite;
+  white-space: nowrap;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
   color: var(--text-secondary);
   max-width: 600px;
-  margin: 0 auto 2.5rem auto;
+  margin: 0 auto 1.25rem auto;
   font-weight: 300;
 }
 
-.hero-buttons {
+.hero-actions {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   justify-content: center;
 }
 
 /* Features Section */
 .features-section {
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  /* padding: 0rem 1.5rem; */
 }
 
 .section-title {
@@ -379,11 +406,16 @@ a {
 
 .feature-card {
   transition: all var(--transition-normal);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: transparent;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(124, 58, 237, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.04);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -722,20 +754,21 @@ a {
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .navbar-container {
     padding: 0 1rem;
   }
-  
+
   .navbar-links {
     gap: 1rem;
   }
-  
+
   .form-card {
     padding: 2.5rem 1.5rem;
   }
-  
-  .dashboard-header, .admin-header {
+
+  .dashboard-header,
+  .admin-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
@@ -747,7 +780,7 @@ a {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .btn {
     width: 100%;
   }
